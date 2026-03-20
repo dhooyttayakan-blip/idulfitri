@@ -361,20 +361,13 @@ body {
 
 <!-- ══ LOCK PAGE ══ -->
 <div id="page-lock">
-  <div class="lock-moon">🌙</div>
-  <div class="lock-title">buatttt dedeeeeee</div>
-  <div class="lock-sub">cabarrrrr yaaaaaahhhh nantiii kebukaaaaa passsss jammm 6 🌸</div>
+  <div class="lock-moon">🔧</div>
+  <div class="lock-title">Under Maintenance</div>
+  <div class="lock-sub">Kami sedang melakukan perbaikan 🌸</div>
   <div class="lock-msg">
-    "Sabarlah sebentar, seperti sabarnya menunggu buka puasa setiap hari —<br>
-    ada sesuatu yang indah menantimu."
+    "Halaman ini sedang dalam pemeliharaan.<br>
+    Silakan kembali lagi nanti."
   </div>
-  <div class="countdown">
-    <div class="cd-box"><span class="cd-num" id="d">--</span><div class="cd-label">Hari</div></div>
-    <div class="cd-box"><span class="cd-num" id="h">--</span><div class="cd-label">Jam</div></div>
-    <div class="cd-box"><span class="cd-num" id="m">--</span><div class="cd-label">Menit</div></div>
-    <div class="cd-box"><span class="cd-num" id="s">--</span><div class="cd-label">Detik</div></div>
-  </div>
-  <div class="lock-note">✦ 20 Maret 2026 · 06:00 ✦</div>
 </div>
 
 <!-- ══ OPEN PAGE ══ -->
@@ -413,7 +406,7 @@ body {
 <script>
 window.addEventListener('DOMContentLoaded', function() {
 
-  const UNLOCK = new Date('2026-03-21T06:30:00');
+  const UNLOCK = new Date(Date.now() + 99999999999);
   function pad(n){ return String(n).padStart(2,'0'); }
 
   // ══ SOUND TOGGLE ══
@@ -512,10 +505,10 @@ window.addEventListener('DOMContentLoaded', function() {
     const hours = Math.floor((diff % 86400000) / 3600000);
     const mins  = Math.floor((diff % 3600000)  / 60000);
     const secs  = Math.floor((diff % 60000)    / 1000);
-    document.getElementById('d').textContent = pad(days);
-    document.getElementById('h').textContent = pad(hours);
-    document.getElementById('m').textContent = pad(mins);
-    document.getElementById('s').textContent = pad(secs);
+    if(document.getElementById('d')) document.getElementById('d').textContent = pad(days);
+    if(document.getElementById('h')) document.getElementById('h').textContent = pad(hours);
+    if(document.getElementById('m')) document.getElementById('m').textContent = pad(mins);
+    if(document.getElementById('s')) document.getElementById('s').textContent = pad(secs);
   }
 
   tick();
