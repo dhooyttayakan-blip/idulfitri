@@ -361,13 +361,20 @@ body {
 
 <!-- ══ LOCK PAGE ══ -->
 <div id="page-lock">
-  <div class="lock-moon">🔧</div>
-  <div class="lock-title">Under Maintenance</div>
-  <div class="lock-sub">Kami sedang melakukan perbaikan 🌸</div>
+  <div class="lock-moon">🌙</div>
+  <div class="lock-title">buatttt dedeeeeee</div>
+  <div class="lock-sub">cabarrrrr yaaaaaahhhh nantiii kebukaaaaa passsss jammm 6 🌸</div>
   <div class="lock-msg">
-    "Halaman ini sedang dalam pemeliharaan.<br>
-    Silakan kembali lagi nanti."
+    "Sabarlah sebentar, seperti sabarnya menunggu buka puasa setiap hari —<br>
+    ada sesuatu yang indah menantimu."
   </div>
+  <div class="countdown">
+    <div class="cd-box"><span class="cd-num" id="d">--</span><div class="cd-label">Hari</div></div>
+    <div class="cd-box"><span class="cd-num" id="h">--</span><div class="cd-label">Jam</div></div>
+    <div class="cd-box"><span class="cd-num" id="m">--</span><div class="cd-label">Menit</div></div>
+    <div class="cd-box"><span class="cd-num" id="s">--</span><div class="cd-label">Detik</div></div>
+  </div>
+  <div class="lock-note">✦ 21 Maret 2026 · 06:30 ✦</div>
 </div>
 
 <!-- ══ OPEN PAGE ══ -->
@@ -406,7 +413,7 @@ body {
 <script>
 window.addEventListener('DOMContentLoaded', function() {
 
-  const UNLOCK = new Date(Date.now() + 99999999999);
+  const UNLOCK = new Date(Date.now() + 20000); // PREVIEW 20 detik
   function pad(n){ return String(n).padStart(2,'0'); }
 
   // ══ SOUND TOGGLE ══
